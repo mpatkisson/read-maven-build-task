@@ -1,0 +1,17 @@
+{
+  "name": "read-maven-task",
+  "version": "0.1.0",
+  "description": "A custom Azure Devops task for reading from a Maven pom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Atkisson",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.3",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.27"
+  },
+  "devDependencies": {}
+}
