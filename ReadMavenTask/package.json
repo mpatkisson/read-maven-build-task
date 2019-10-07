@@ -9,11 +9,14 @@
   "author": "Mike Atkisson",
   "license": "MIT",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.9.3"
+    "azure-pipelines-task-lib": "^2.9.3",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.27"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.11",
-    "@types/q": "^1.5.2"
+    "@types/q": "^1.5.2",
+    "@types/xmldom": "^0.1.29"
   }
 }

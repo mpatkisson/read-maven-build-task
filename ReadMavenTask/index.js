@@ -10,15 +10,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const tl = require("azure-pipelines-task-lib/task");
+const xpath = require("xpath");
+const dom = require("xmldom");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const inputString = tl.getInput('samplestring', true) || 'bad';
-            if (inputString == 'bad') {
-                tl.setResult(tl.TaskResult.Failed, 'Bad input was given');
-                return;
-            }
-            console.log('Hello', inputString);
+            var title = '';
+            const xml = '<book><title>Harry Potter</title></book>';
+            const parser = new dom.DOMParser();
+            const doc = parser.parseFromString(xml);
+            const node = xpath.select("//title", doc);
+            //const inputString: string = tl.getInput('samplestring', true) || 'bad';
+            //if (inputString == 'bad') {
+            //tl.setResult(tl.TaskResult.Failed, 'Bad input was given');
+            //return;
+            //}
+            console.log('Hello', node[0].toString());
         }
         catch (err) {
             tl.setResult(tl.TaskResult.Failed, err.message);
