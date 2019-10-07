@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+   "id": "c70658b9-2ceb-4922-bf17-ddb065721603",
+   "name": "ReadMaven",
+   "friendlyName": "Read Maven POM",
+   "description": "Reads values from a Maven POM and stores them into build variables",
+   "helpMarkDown": "",
+   "category": "Utility",
+   "author": "Mike Atkisson",
+   "version": {
+     "Major": 0,
+     "Minor": 1,
+     "Patch": 0
+   },
+   "instanceNameFormat": "Echo $(samplestring)",
+   "inputs": [
+       {
+          "name": "samplestring",
+          "type": "string",
+          "label": "Sample String",
+          "defaultValue": "",
+          "required": true,
+          "helpMarkDown": "A sample string"
+       }
+   ],
+   "execution": {
+      "Node10": {
+        "target": "index.js"
+       }
+   }
+}
